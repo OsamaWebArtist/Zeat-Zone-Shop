@@ -1,0 +1,8 @@
+.page-error{
+    display: flex;
+    justify-content: center;
+    & iframe{
+        width: 500px;
+        height: 500px;
+    }
+}

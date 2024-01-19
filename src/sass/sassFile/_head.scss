@@ -1,0 +1,523 @@
+@import "../root";
+
+.head{
+    border-bottom: 2px solid #eee;
+    padding: 15px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .fa-bars{
+            display: none;
+            
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+            color: black;
+            user-select: none;
+            & img{
+                width: 50px;
+            }
+            & span{
+                margin-left: 3px;
+                font-family: var(--font-sans-little);
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+            }
+        }
+        .head-nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        .link{
+            font-family: var(--font-sans-little);
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            & ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+                text-decoration: none;
+                .active{
+                    a{
+                        background-color: black;
+                    }
+                    
+                }
+
+                & li{
+                    position: relative;
+                    margin: 0 15px 0 15px;
+                    padding: 6px;
+                    width: 80px;
+                    text-align: center;
+                    & span{
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        overflow: hidden;
+                        right: 0;
+                        transition: 0.5s;
+                        transition-delay: 0.5s;
+                    }
+
+                    &:hover{
+
+                        & span{
+                            width: 100%;
+                            height: 100%;
+                            background-color: white;
+                            left: 0;
+                            z-index:5 ;
+                        }
+                        }
+                        .router-link-active{
+                            border-bottom: 1px solid black;
+                        }
+                        & a{
+                        padding: 2px;
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .sign-log{
+            text-align: center;
+            font-family: var(--font-sans-little);
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+
+            .log{
+                padding: 3px 10px;
+                color: white;
+                background: black;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                transition: 0.5s;
+                margin-right: 10px;
+                & a{
+                    text-decoration: none;
+                    color: white;
+                    transition: 0.5s;
+                }
+                &:hover{
+                    color: black;
+                    background-color: white;
+                    border: 1px solid black;
+                    cursor: pointer;
+                    & a{
+                        color: black;
+                        
+                    }
+                }
+            }
+            .sign{
+                padding: 3px 10px;
+                color: white;
+                background: black;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                transition: 0.5s;
+                & a{
+                    text-decoration: none;
+                    color: white;
+                    transition: 0.5s;
+                }
+                &:hover{
+                    color: black;
+                    background-color: white;
+                    border: 1px solid black;
+                    cursor: pointer;
+                    & a{
+                        color: black;
+                        
+                    }
+                }
+            }
+
+            .user_account{
+                display: flex;
+                border-left: 1px solid black;
+                padding-left: 30px;
+                position: relative;
+
+                .orders{
+                    background: black;
+                    height: fit-content;
+                    color: white;
+                    padding: 0px 7px;
+                    border-radius: 50%;
+                    font-weight: bold;
+                    left: 58px;
+                    position: absolute;
+                    font-size: 14px;
+                    bottom: 28px;
+                    box-shadow: -3px 1px 14px 0px #454545;
+                    z-index: 1;
+                    }
+
+                .cart{
+                    position: absolute;
+                    top: 68px;
+                    right: 0;
+                    min-height: 100px;
+                    width: 432px;
+                    background: black;
+                    border-radius: 5px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    z-index: 1;
+
+                        .product_cart{
+
+                            display: flex;
+                            align-items: center;
+                            margin: 15px 0;
+                            width: 100%;
+                            .prod_cart{
+                                width: 100px;
+                                height: 90px;
+                                border-radius: 35%;
+                            }
+
+                            & span:nth-child(2){
+                                color: white;
+                                font-size: 12px;
+                                border-left: 1px solid white;
+                                max-height: 90px;
+                                overflow: hidden;
+                            }
+                            & span:nth-child(3){
+                                color: white;
+                                border-left: 1px solid white;
+                                letter-spacing: 1px;
+                            }
+                            & lord-icon{
+                                display: block;
+                                border-left: 1px solid white;
+                                cursor: pointer;
+                            }
+                            
+                        }
+                        
+                        & .butt_check{
+                                width: 90%;
+                                background: white;
+                                border: none;
+                                margin: 10px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                padding: 10px 0;
+                                border: 1px solid transparent;
+                                transition: 0.5s;
+                                display: flex;
+                                justify-content: center;
+                                font-weight: bold;
+                                &:hover{
+                                    color: white;
+                                    border: 1px solid white;
+                                    background-color: black;
+                                }
+                            }
+                    }
+                
+                .basket{
+                    cursor: pointer;
+                }
+
+                .user{
+                    position: relative;
+                    margin-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    .account{
+                        cursor: pointer;
+                    }
+                    & i{
+                        font-size: 40px;
+                        color: black;
+                        margin-left: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+
+
+/*Media Query*/
+
+@media (max-width:769px) {
+    .head{
+        position: relative;
+        .container{
+
+            & .fa-bars{
+                transform: scale(1.5);
+                cursor: pointer;
+                display: block;
+            }
+            &:hover{
+                    .head-nav{
+                        display: flex;
+                    }
+                }
+            .logo{
+                & img{
+                }
+                & span{
+                }
+            }
+            .head-nav{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: white;
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 12px 1px;
+                z-index: 5;
+                width: fit-content;
+            .link{
+                font-family: var(--font-sans-little);
+                font-size: 16px;
+                font-weight: bold;
+                color: black;
+                & ul{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    /* margin: auto; */
+                    justify-content: center;
+                    text-decoration: none;
+                    align-items: center;
+                    padding: 0;
+                    .active{
+                        a{
+                            background-color: black;
+                        }
+                        
+                    }
+    
+                    & li{
+                        position: relative;
+                        margin: 0 15px 0 15px;
+                        padding: 6px;
+                        width: 80px;
+                        text-align: center;
+                        & span{
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            overflow: hidden;
+                            right: 0;
+                            transition: 0.5s;
+                            transition-delay: 0.5s;
+                        }
+    
+                        &:hover{
+    
+                            & span{
+                                width: 100%;
+                                height: 100%;
+                                background-color: white;
+                                left: 0;
+                                z-index:5 ;
+                            }
+                            }
+                            .router-link-active{
+                                border-bottom: 1px solid black;
+                            }
+                            & a{
+                            padding: 2px;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .sign-log{
+                margin: 15px 0;
+    
+                .log{
+                    padding: 3px 10px;
+                    color: white;
+                    background: black;
+                    border-radius: 5px;
+                    border: 1px solid transparent;
+                    transition: 0.5s;
+                    margin-right: 10px;
+                    & a{
+                        text-decoration: none;
+                        color: white;
+                        transition: 0.5s;
+                    }
+                    &:hover{
+                        color: black;
+                        background-color: white;
+                        border: 1px solid black;
+                        cursor: pointer;
+                        & a{
+                            color: black;
+                            
+                        }
+                    }
+                }
+                .sign{
+                    padding: 3px 10px;
+                    color: white;
+                    background: black;
+                    border-radius: 5px;
+                    border: 1px solid transparent;
+                    transition: 0.5s;
+                    & a{
+                        text-decoration: none;
+                        color: white;
+                        transition: 0.5s;
+                    }
+                    &:hover{
+                        color: black;
+                        background-color: white;
+                        border: 1px solid black;
+                        cursor: pointer;
+                        & a{
+                            color: black;
+                            
+                        }
+                    }
+                }
+    
+                .user_account{
+                    display: flex;
+                    border-left: none;
+                    padding-left: 0;
+                    position: relative;
+    
+                    .orders{
+                        background: black;
+                        height: fit-content;
+                        color: white;
+                        padding: 0px 7px;
+                        border-radius: 50%;
+                        font-weight: bold;
+                        left: 30px;
+                        position: absolute;
+                        font-size: 14px;
+                        bottom: 28px;
+                        box-shadow: -3px 1px 14px 0px #454545;
+                        z-index: 1;
+                        }
+    
+                    .cart{
+                        position: absolute;
+                        top: 68px;
+                        right: 0;
+                        min-height: 100px;
+                        width: 432px;
+                        background: black;
+                        border-radius: 5px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        z-index: 1;
+    
+                            .product_cart{
+    
+                                display: flex;
+                                align-items: center;
+                                margin: 15px 0;
+                                width: 100%;
+                                .prod_cart{
+                                    width: 100px;
+                                    height: 90px;
+                                    border-radius: 35%;
+                                }
+    
+                                & span:nth-child(2){
+                                    color: white;
+                                    font-size: 12px;
+                                    border-left: 1px solid white;
+                                    max-height: 90px;
+                                    overflow: hidden;
+                                }
+                                & span:nth-child(3){
+                                    color: white;
+                                    border-left: 1px solid white;
+                                    letter-spacing: 1px;
+                                }
+                                & lord-icon{
+                                    display: block;
+                                    border-left: 1px solid white;
+                                    cursor: pointer;
+                                }
+                                
+                            }
+                            
+                            & .butt_check{
+                                    width: 90%;
+                                    background: white;
+                                    border: none;
+                                    margin: 10px;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    padding: 10px 0;
+                                    border: 1px solid transparent;
+                                    transition: 0.5s;
+                                    display: flex;
+                                    justify-content: center;
+                                    font-weight: bold;
+                                    &:hover{
+                                        color: white;
+                                        border: 1px solid white;
+                                        background-color: black;
+                                    }
+                                }
+                        }
+                    
+                    .basket{
+                        cursor: pointer;
+                    }
+    
+                    .user{
+                        position: relative;
+                        margin-left: 20px;
+                        display: flex;
+                        align-items: center;
+                        .account{
+                            cursor: pointer;
+                        }
+                        & i{
+                            font-size: 40px;
+                            color: black;
+                            margin-left: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+}

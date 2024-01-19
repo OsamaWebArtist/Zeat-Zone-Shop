@@ -1,0 +1,288 @@
+@import "../root";
+
+.about-section{
+    
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+        .welcome-section{
+            margin-top: 100px;
+        
+            .hello{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                z-index: 2;
+                & h3{
+                    font-family: var(--font-Kanit-bold);
+                    margin: 10px 10px 20px 0;
+                    font-size: 32px;
+                    color: black;
+                }
+                & p{
+                    font-family: var(--font-sans-little);
+                    font-weight: bold;
+                    line-height: 1.8;
+                    width: 685px;
+
+                    & span{
+                        color: white;
+                    }
+                }
+            }
+            .animation{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                & iframe{
+                    height: 289px;
+                    background-color: black;
+                    width: 309px;
+                }
+            }
+        }
+
+        .story-section{
+            background-color: black;
+            .story{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+                
+                & h3{
+                    font-family: var(--font-Kanit-bold);
+                    margin: 10px 10px 20px 0;
+                    font-size: 32px;
+                }
+                & p{
+                    font-family: var(--font-sans-little);
+                    font-weight: bold;
+                    line-height: 1.8;
+
+                }
+            }
+            .animation{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 0;
+                & lord-icon{
+                    background-color: white;
+                }
+            }
+        }
+
+        .offer-section{
+            .offer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: black;
+                & h3{
+                    font-family: var(--font-Kanit-bold);
+                    margin: 10px 10px 20px 0;
+                    font-size: 32px;
+                }
+                & p{
+                    font-family: var(--font-sans-little);
+                    font-weight: bold;
+                    line-height: 1.8;
+                
+                }
+            }
+            .animation{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 0;
+                & iframe{
+                    height: 289px;
+                    background-color: black;
+                    width: 321px;
+                }
+            }
+        }
+
+        .mission-section{
+                background-color: black;
+                .mission{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                & h3{
+                    font-family: var(--font-Kanit-bold);
+                    margin: 10px 10px 20px 0;
+                    font-size: 32px;
+                }
+                & p{
+                    font-family: var(--font-sans-little);
+                    font-weight: bold;
+                    line-height: 1.8;
+                
+                }
+            }
+            .animation{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 0;
+                & iframe{
+                    height: 289px;
+                    background-color: white;
+                    width: 321px;
+                }
+            }
+        }
+
+        .community-section{
+            border-radius: 5px;
+            .community{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: black;
+                & h3{
+                    font-family: var(--font-Kanit-bold);
+                    margin: 10px 10px 20px 0;
+                    font-size: 32px;
+                }
+                & p{
+                    font-family: var(--font-sans-little);
+                    font-weight: bold;
+                    line-height: 1.8;
+                
+                }
+            }
+            .animation{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 0;
+                & lord-icon{
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*media query*/
+
+
+@media  (max-width:992px){
+    .about-section{
+    
+        .container{
+            .welcome-section{
+                .hello{
+
+                    & h3{
+                    }
+                    & p{
+
+                        width: 100%;
+    
+                        & span{
+                            color: black;
+                        }
+                    }
+                }
+                .animation{
+                    & iframe{
+                        height: 100%;
+                        background-color: black;
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .story-section{
+
+                .story{
+                    
+                    & h3{
+
+                    }
+                    & p{
+                    }
+                }
+                .animation{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 0;
+                    & lord-icon{
+                        background-color: white;
+                        width: 100% !important;
+                        height: 100% !important;
+                    }
+                }
+            }
+    
+            .offer-section{
+                .offer{
+
+                    & h3{
+
+                    }
+                    & p{
+                    
+                    }
+                }
+                .animation{
+                    & iframe{
+                        height: 100%;
+                        background-color: black;
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .mission-section{
+                    background-color: black;
+                    .mission{
+
+                    & h3{
+
+                    }
+                    & p{
+                    
+                    }
+                }
+                .animation{
+
+                    & iframe{
+                        height: 100%;
+                        background-color: white;
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .community-section{
+
+                .community{
+
+                    & h3{
+
+                    }
+                    & p{
+
+                    
+                    }
+                }
+                .animation{
+                    & lord-icon{
+                        width: 100% !important;
+                        background-color: black;
+                        height: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}

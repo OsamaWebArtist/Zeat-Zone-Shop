@@ -1,0 +1,172 @@
+@import "../root";
+
+.product-section{
+    margin-top:100px ;
+    margin-bottom: 30px;
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+
+        .img-prod{
+            position: relative;
+            & span{
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: black;
+                padding: 5px 20px;
+                border-radius: 5px;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: var(--font-Kanit-bold);
+                color: white;
+                letter-spacing: 1px;
+            }
+            & img{
+                width: 420PX;
+                border-radius: 5px;
+                height: 400PX;
+            }
+        }
+
+        .prod-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & h3{
+                font-family: var(--font-Kanit-bold);
+                color: black;
+            }
+            
+            .rat{
+                margin-top: 20px;
+                & span:nth-child(1){
+                    color: white;
+                    background-color: black;
+                    padding: 5px;
+                    font-family: var(--font-Kanit-bold);
+                    border-radius: 5px;
+                }
+                & span:nth-child(2){
+                    margin-left: 20px;
+                    color: black;
+                    font-family: var(--font-Kanit-bold);
+                    font-weight: bold;
+                    border: 1px solid black;
+                    padding: 5px;
+                    border-radius: 5px;
+                    & i{
+
+                    }
+                }
+            }
+
+            & p{
+                line-height: 1.6;
+                font-family: var(--font-Kanit-bold);
+                color: black;
+                font-size: 18px;
+                margin-top: 20px;
+                max-height: 120px;
+                overflow: hidden;
+            }
+
+            .prod-quantity{
+
+                .minus{
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    font-size: 30px;
+                    color: white;
+                    background-color: black;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    transition: 0.5s;
+                    & i{
+
+                    }
+                    
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid black;
+                        color :black;
+                    }
+                }
+
+                .quantity::-webkit-inner-spin-button,
+                .quantity::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                .quantity{
+                    font-family: var(--font-Kanit-bold);
+                    padding: 0 10px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: black;
+                    width: 67px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    user-select: none;
+                    display: inline-block;
+                    text-align: center;
+                    border: none;
+
+                    &:focus{
+                        border: none;
+                        outline: none;
+                        user-select: none;
+                    }
+                }
+                
+
+                .plus{
+                    border-radius: 5px;
+                    padding: 0 10px;
+                    font-size: 30px;
+                    color: white;
+                    background-color: black;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    transition: 0.5s;
+                    & i{
+
+                    }
+                    &:hover{
+                        background-color: white;
+                        border: 1px solid black;
+                        color :black;
+                    }
+                }
+
+
+            }
+
+            .add-cart{
+                margin-top: 20px;
+                border: none;
+                border-radius: 5px;
+                background-color: black;
+                color: white;
+                padding: 10px 0;
+                transition: 0.5s;
+                border: 1px solid transparent;
+                & i{
+                    margin-right: 5px;
+                }
+
+                & span{
+                    font-family: var(--font-Kanit-bold);
+
+                }
+                &:hover{
+                    background-color: white;
+                    border: 1px solid black;
+                    color :black;
+                }
+            }
+        }
+    }
+}

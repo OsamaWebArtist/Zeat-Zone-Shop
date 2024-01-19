@@ -1,0 +1,165 @@
+@import "../root"; 
+
+.Prod-section{
+    .home-product{
+        .all-products{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            text-decoration: none;
+            .product{
+                width: 278px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid transparent;
+                border-radius: 5px;
+                transition: 0.5s;
+                margin: 35px 20px;
+                cursor: pointer;
+                padding: 15px;
+                position: relative;
+                height: 380px;
+
+                & a{
+                    text-decoration: none;
+                }
+                .favorite{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 5px;
+                        font-size: 20px;
+                        color: black;
+                        cursor: pointer;
+
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+
+                &::before{
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: 0;
+                width: 0%;
+                transition: 0.5s;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0px;
+                    height: 0%;
+                    transition: 0.5s 0.5s;
+                    
+                    }
+                &:hover{
+                    box-shadow: 0px 0px 20px #838383;
+                    perspective-origin: right center;
+                    transform: scale(1.1);
+                    border-right: 2px solid black;
+                    border-top: 2px solid black;
+                }
+                &:hover {
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: -2px;
+                        width: 100.8%; 
+                        height: 2px;
+                        background-color: black;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: -2px;
+                        bottom: 0;
+                        width: 2px;
+                        background-color: black;
+                        height: 100%;
+                        }
+                }
+                .img-prod{
+                    display: flex;
+                    justify-content: center;
+                    & img{
+                        width: 180px;
+                        height: 200px;
+                    }
+                }
+                .prod-info{
+                    color: black;
+                    .prod-price{
+                        margin: 5px 0;
+                        & h4{
+                            font-family: var(--font-Kanit-bold);
+                            white-space: nowrap; /* Prevents text from wrapping */
+                            overflow: hidden; /* Hides overflowing content */
+                            text-overflow: ellipsis;
+                            width: 220px;
+                        }
+                        & span{
+                            font-family: var(--font-Kanit-bold);
+                            border: 1px solid black;
+                            padding: 0px 5px;
+                            border-radius: 5px;
+                            background: black;
+                            color: white;
+                            font-size: 20px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    
+                    .rating{
+                        & i{
+
+                        }
+                        & span{
+                            font-weight: bold;
+                            margin-left: 5px;
+                            font-family: var(--font-Kanit-bold);
+                        }
+                    }
+                    .cart-add{
+                        & button{
+                            border: none;
+                            color: white;
+                            background: black;
+                            width: 100%;
+                            border-radius: 5px;
+                            margin: 10px 0;
+                            cursor: pointer;
+                            padding: 5px 0;
+                            transition: 0.5s;
+                            font-family: var(--font-Kanit-bold);
+                            letter-spacing: 1px;
+                            border: 1px solid transparent;
+                            &:hover{
+                                background-color: white;
+                                color: black;
+                                border: 1px solid black;
+                                font-weight: bold;
+                            }
+
+                            & i{
+                                margin-right: 5px;
+                            }
+                            & span{
+
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
